@@ -1,7 +1,7 @@
 # armhf support libs for mcpelauncher
 
 This doesn't create a real `libc.so`, instead it contains only a small subset of symbols it would normally include.
-Android armv7 is softfloat based, while most linux distributions use hardfload. This would lead to a lot of wrapped floating point functions avoided by this support libs.
+Android armv7 is softfloat based, while most linux distributions are using hardfloat. This would lead to a lot of wrapped floating point functions avoided by these support libraries.
 
 Based on android ndk and modified source code of https://android.googlesource.com/platform/bionic/+/refs/tags/platform-tools-29.0.6/libc/arch-arm/bionic/
 
