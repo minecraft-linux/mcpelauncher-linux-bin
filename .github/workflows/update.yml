@@ -7,7 +7,7 @@ jobs:
     - uses: actions/checkout@v3
     - run: |
         PATH_TO_NDK="$ANDROID_NDK"
-        "$PATH_TO_NDK/toolchains/llvm/prebuilt/linux-x86_64/bin/armv7a-linux-androideabi21-clang" -shared -o libc.so libcrt_compat.c __aeabi.c exidx_dynamic.c -Wl,-soname=libc.so -nostdlib "$PATH_TO_NDK/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang"/*/"lib/linux/libclang_rt.builtins-arm-android.a"
+        "$PATH_TO_NDK/toolchains/llvm/prebuilt/linux-x86_64/bin/armv7a-linux-androideabi21-clang" -shared -o libc.so libcrt_compat.c __aeabi.c exidx_dynamic.c -Wl,-soname=libc.so -nostdlib "$(echo "$PATH_TO_NDK/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/"*)/lib/linux/libclang_rt.builtins-arm-android.a"
         "$PATH_TO_NDK/toolchains/llvm/prebuilt/linux-x86_64/bin/armv7a-linux-androideabi21-clang" -shared -o libm.so -Wl,-soname=libm.so -Wl,--whole-archive "$PATH_TO_NDK/platforms/android-21/arch-arm/usr/lib/libm.a" -Wl,--no-whole-archive
       working-directory: lib/armeabi-v7a
     - uses: actions/upload-artifact@v3
