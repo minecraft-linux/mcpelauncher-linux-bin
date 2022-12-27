@@ -4,6 +4,7 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
     - run: |
         PATH_TO_NDK="$ANDROID_NDK"
         "$PATH_TO_NDK/toolchains/llvm/prebuilt/linux-x86_64/bin/armv7a-linux-androideabi21-clang" -shared -o libc.so libcrt_compat.c __aeabi.c exidx_dynamic.c -Wl,-soname=libc.so -nostdlib "$PATH_TO_NDK/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/*/lib/linux/libclang_rt.builtins-arm-android.a"
