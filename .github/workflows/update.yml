@@ -1,5 +1,6 @@
 name: update
-on: push
+on: workflow_dispatch
+run-name: update-${{ github.ref }}
 jobs:
   update:
     runs-on: ubuntu-latest
