@@ -16,3 +16,10 @@ jobs:
         path: |
           lib/armeabi-v7a/libc.so
           lib/armeabi-v7a/libm.so
+    - name: Push
+      run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "update prebuild armhf libs"
+          git push
