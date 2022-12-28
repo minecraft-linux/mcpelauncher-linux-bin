@@ -80,7 +80,7 @@ extern char __aeabi_uidivmod;
 extern char __aeabi_ul2d;
 extern char __aeabi_ul2f;
 extern char __aeabi_uldivmod;
-extern char __aeabi_unwind_cpp_pr0;
+// extern char __aeabi_unwind_cpp_pr0;
 // extern char __aeabi_unwind_cpp_pr1;
 // extern char __cmpdf2;
 // extern char __cmpsf2;
@@ -179,7 +179,7 @@ void* __bionic_libcrt_compat_symbols[] = {
     &__aeabi_ul2d,
     &__aeabi_ul2f,
     &__aeabi_uldivmod,
-    &__aeabi_unwind_cpp_pr0,
+    // &__aeabi_unwind_cpp_pr0,
     // &__aeabi_unwind_cpp_pr1,
     // &__cmpdf2,
     // &__cmpsf2,
